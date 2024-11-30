@@ -1,0 +1,14 @@
+.card {
+    width: 250px;
+}
+
+.card-img-top {
+    height: 300px;
+    width: 250px;
+}
+
+.btn {
+    background-color: #8b5e3c !important;
+    border: none !important;
+    color: white !important;
+}

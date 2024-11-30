@@ -1,0 +1,124 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.0">
+  <diagram name="Página-1" id="W3VHDUK4EmS-ysOo_LsE">
+    <mxGraphModel dx="1050" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0xoRekVa-GFei2VR00Sp-1" value="Registro" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="160" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-2" value="CrearCuenta()&lt;div&gt;CambiarDatos()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0xoRekVa-GFei2VR00Sp-1">
+          <mxGeometry y="110" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-21" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Nombre (String)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;- Rut (String)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;- Teléfono (Int)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;- Correo (String)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;- Dirección (String)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="0xoRekVa-GFei2VR00Sp-1">
+          <mxGeometry y="24" width="160" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-3" value="Recursos" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="30" width="150" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-4" value="MarcarDesmarcarPrestado()&lt;div&gt;EncontrarRecurso()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0xoRekVa-GFei2VR00Sp-3">
+          <mxGeometry y="110" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-23" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Nombre (String)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;-N_Ejemplar (Int)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;-Reservado (Bool)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;-Devolución (Time)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;- CódigoU (String&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="0xoRekVa-GFei2VR00Sp-3">
+          <mxGeometry y="24" width="150" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-5" value="Libros" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="300" width="140" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-24" value="&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Subtipo (String)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Editorial (String)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-NúmeroP (Int)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="0xoRekVa-GFei2VR00Sp-5">
+          <mxGeometry y="24" width="140" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="410" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-7" value="Multimedia" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="300" width="140" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-25" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Formato (Bool)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Medio (String)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Compañía (String)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Duración (Float)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="0xoRekVa-GFei2VR00Sp-7">
+          <mxGeometry y="24" width="140" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-8" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="410" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-11" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="300" as="sourcePoint" />
+            <mxPoint x="585" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="510" y="270" />
+              <mxPoint x="585" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-12" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="0xoRekVa-GFei2VR00Sp-13" target="0xoRekVa-GFei2VR00Sp-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="310" as="sourcePoint" />
+            <mxPoint x="595" y="220" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-14" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0xoRekVa-GFei2VR00Sp-7" target="0xoRekVa-GFei2VR00Sp-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="680" y="300" as="sourcePoint" />
+            <mxPoint x="585" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="270" />
+              <mxPoint x="585" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-13" value="" style="triangle;whiteSpace=wrap;html=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="570" y="210" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-15" value="Prestamo" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="30" width="160" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-16" value="&lt;div&gt;IngresarRecursos()&lt;/div&gt;CrearPrestamo()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0xoRekVa-GFei2VR00Sp-15">
+          <mxGeometry y="110" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-22" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Nombre (String)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;- Rut (String)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;- Teléfono (Int)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;- Correo (String)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;- Dirección (String)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;- Tipo_de_prestamo (Bool)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="0xoRekVa-GFei2VR00Sp-15">
+          <mxGeometry y="24" width="160" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-26" value="Colaboradores" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="60" width="90" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-28" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Nombre (String)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;-Tipo (String)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="0xoRekVa-GFei2VR00Sp-26">
+          <mxGeometry y="24" width="90" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-29" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0xoRekVa-GFei2VR00Sp-3" target="0xoRekVa-GFei2VR00Sp-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="90" as="sourcePoint" />
+            <mxPoint x="710" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-30" value="1..*&amp;nbsp; &amp;nbsp; &amp;nbsp;1..*" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="627" y="97" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-32" value="1&amp;nbsp; &amp;nbsp; &amp;nbsp;1..*" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="415" y="90" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-33" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" target="0xoRekVa-GFei2VR00Sp-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="120" as="sourcePoint" />
+            <mxPoint x="510" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-34" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0xoRekVa-GFei2VR00Sp-1" target="0xoRekVa-GFei2VR00Sp-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="310" as="sourcePoint" />
+            <mxPoint x="440" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-35" value="1&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 1..*" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="95" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-37" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="220" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="0xoRekVa-GFei2VR00Sp-39" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;NOTA:&amp;nbsp;&lt;/span&gt;&lt;div style=&quot;border-color: var(--border-color); text-wrap-mode: nowrap;&quot;&gt;Registro es como el usuario&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;Recursos son las cosas que la biblio&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;tiene para prestar&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); text-wrap-mode: nowrap;&quot;&gt;Colaboradores serían los autores,&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); text-wrap-mode: nowrap;&quot;&gt;&amp;nbsp;guionistas, actores&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); text-wrap-mode: nowrap;&quot;&gt;Tengo que seguir mirando a ver que&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); text-wrap-mode: nowrap;&quot;&gt;&amp;nbsp;mas se puede mejorar ( ya se como,&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); text-wrap-mode: nowrap;&quot;&gt;&amp;nbsp;pero se expandiría mas)&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="220" height="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
