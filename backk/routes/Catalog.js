@@ -1,47 +1,28 @@
 const express = require("express");
 const Document = require("../models/Document");
-
 const router = express.Router();
 
-// Obtener todos los documentos
+// Endpoint para obtener todos los libros
 router.get("/", async (req, res) => {
   try {
-    const documents = await Document.find();
-    res.status(200).json(documents);
+    const books = await Document.find();
+    res.status(200).json(books);
   } catch (error) {
-    console.error("Error al obtener los documentos:", error);
-    res.status(500).json({ message: "Error al obtener los documentos", error });
+    console.error("Error al obtener los libros:", error);
+    res.status(500).json({ message: "Error al obtener los libros" });
   }
 });
 
-// Crear un documento
-router.post("/", async (req, res) => {
-  const { title, author, category, type, stock } = req.body;
+// Endpoint para obtener libros destacados
+router.get("/featured", async (req, res) => {
   try {
-    const newDocument = new Document({ title, author, category, type, stock });
-    await newDocument.save();
-    res.status(201).json(newDocument);
+    // Obtener libros disponibles y limitar el resultado a 10
+    const featuredBooks = await Document.find({ available: true }).limit(10);
+    res.status(200).json(featuredBooks);
   } catch (error) {
-    console.error("Error al crear el documento:", error);
-    res.status(500).json({ message: "Error al crear el documento", error });
+    console.error("Error al obtener libros destacados:", error);
+    res.status(500).json({ message: "Error al obtener libros destacados" });
   }
 });
-
-
-router.get("/title/:title", async (req, res) => {
-  const { title } = req.params; // Obtén el título desde los parámetros
-  try {
-    const document = await Document.findOne({ title: { $regex: `^${title}$`, $options: "i" } }); // Busca el título exacto, ignorando mayúsculas y minúsculas
-    if (!document) {
-      return res.status(404).json({ message: "Documento no encontrado" });
-    }
-    res.status(200).json(document);
-  } catch (error) {
-    console.error("Error al obtener el documento:", error);
-    res.status(500).json({ message: "Error al obtener el documento", error });
-  }
-});
-
-
 
 module.exports = router;

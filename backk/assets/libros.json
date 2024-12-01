@@ -1,0 +1,272 @@
+[
+    {
+        "id": 1,
+        "titulo": "El Principito",
+        "autor": "Antoine de Saint-Exupéry",
+        "genero": "Fantasía",
+        "imagen": "https://th.bing.com/th/id/OIP.4jjqK8r4niDGIu1EzysUaAHaL8?rs=1&pid=ImgDetMain",
+        "disponible": true,
+        "sinopsis": "Un piloto se encuentra con un joven príncipe de otro planeta que comparte lecciones profundas sobre el amor, la pérdida y la humanidad."
+    },
+    {
+        "id": 2,
+        "titulo": "Cien Años de Soledad",
+        "autor": "Gabriel García Márquez",
+        "genero": "Realismo Mágico",
+        "imagen": "https://th.bing.com/th/id/OIP.V_zRhQVc2o3qUvlc7KwpxgHaLT?w=600&h=916&rs=1&pid=ImgDetMain",
+        "disponible": false,
+        "sinopsis": "La épica historia de la familia Buendía en el pueblo ficticio de Macondo, explorando el amor, la soledad y el paso del tiempo."
+    },
+    {
+        "id": 3,
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "genero": "Distopía",
+        "imagen": "https://th.bing.com/th/id/OIP.8weipgxeZASSI2nt9APKNAAAAA?rs=1&pid=ImgDetMain",
+        "disponible": true,
+        "sinopsis": "En una sociedad totalitaria gobernada por el Gran Hermano, Winston Smith lucha por la libertad y la verdad."
+    },
+    {
+        "id": 4,
+        "titulo": "Orgullo y Prejuicio",
+        "autor": "Jane Austen",
+        "genero": "Romance",
+        "imagen": "https://pendulo.com/imagenes_grandes/9788494/978849441163.GIF",
+        "disponible": false,
+        "sinopsis": "Elizabeth Bennet desafía las expectativas sociales mientras enfrenta el amor y los prejuicios en la Inglaterra del siglo XIX."
+    },
+    {
+        "id": 5,
+        "titulo": "Matar a un Ruiseñor",
+        "autor": "Harper Lee",
+        "genero": "Drama",
+        "imagen": "https://th.bing.com/th/id/OIP.WkeSeazZ7vVD64srE9yUYAHaLP?rs=1&pid=ImgDetMain",
+        "disponible": true,
+        "sinopsis": "Scout Finch relata cómo su padre, un abogado en el sur de Estados Unidos, defiende a un hombre negro injustamente acusado de violación."
+    },
+    {
+        "id": 6,
+        "titulo": "El Gran Gatsby",
+        "autor": "F. Scott Fitzgerald",
+        "genero": "Clásico",
+        "imagen": "https://th.bing.com/th/id/OIP.XctOmmqwwc0T2c7HaXpRYAHaLu?rs=1&pid=ImgDetMain",
+        "disponible": false,
+        "sinopsis": "Jay Gatsby, un millonario misterioso, intenta recuperar el amor de Daisy Buchanan en la extravagante Nueva York de los años 20."
+    },
+    {
+        "id": 7,
+        "titulo": "Don Quijote de la Mancha",
+        "autor": "Miguel de Cervantes",
+        "genero": "Aventura",
+        "imagen": "https://th.bing.com/th/id/OIP.p2Qht0iMCaSgQb3wbzHukAHaKN?rs=1&pid=ImgDetMain",
+        "disponible": true,
+        "sinopsis": "Un caballero idealista y su fiel escudero, Sancho Panza, emprenden aventuras hilarantes y conmovedoras en busca de justicia."
+    },
+    {
+        "id": 8,
+        "titulo": "Harry Potter y la Piedra Filosofal",
+        "autor": "J.K. Rowling",
+        "genero": "Fantasía",
+        "imagen": "https://1.bp.blogspot.com/-Swnw1F-qqms/XmUL5f-OekI/AAAAAAAAGxM/3PagZ_C_nxYw7DDzAKmZD1fQXud0VmXAwCLcBGAsYHQ/s1600/portada-harry-potter-y-la-piedra-filosofal-nueva-edicion-bolsillo-2020-libro-pdf.jpg",
+        "disponible": false,
+        "sinopsis": "Harry descubre que es un mago y asiste a Hogwarts, donde se enfrenta al desafío de derrotar a un enemigo oscuro."
+    },
+    {
+        "id": 9,
+        "titulo": "El Hobbit",
+        "autor": "J.R.R. Tolkien",
+        "genero": "Fantasía",
+        "imagen": "https://th.bing.com/th/id/OIP.jPKl0ooFbgYAhrboBbkE9AHaLg?rs=1&pid=ImgDetMain",
+        "disponible": true,
+        "sinopsis": "Bilbo Bolsón se une a un grupo de enanos para recuperar un tesoro custodiado por el dragón Smaug."
+    },
+    {
+        "id": 10,
+        "titulo": "Crimen y Castigo",
+        "autor": "Fiódor Dostoyevski",
+        "genero": "Filosófico",
+        "imagen": "https://th.bing.com/th/id/OIP.V9OyndtvlsmlPzTNgcJUywHaKS?rs=1&pid=ImgDetMain",
+        "disponible": false,
+        "sinopsis": "Raskolnikov, un estudiante pobre, lucha con su culpa después de cometer un asesinato."
+    },
+    {
+        "id": 11,
+        "titulo": "La Odisea",
+        "autor": "Homero",
+        "genero": "Épico",
+        "imagen": "https://th.bing.com/th/id/OIP.orubhAbd3krsFuvipF4XIQHaLR?rs=1&pid=ImgDetMain",
+        "disponible": true,
+        "sinopsis": "Ulises enfrenta desafíos épicos en su largo viaje de regreso a casa tras la guerra de Troya."
+    },
+    {
+        "id": 12,
+        "titulo": "Los Miserables",
+        "autor": "Victor Hugo",
+        "genero": "Drama",
+        "imagen": "https://th.bing.com/th/id/OIP.hPB72k8D5LswiqsLthCVjgAAAA?rs=1&pid=ImgDetMain",
+        "disponible": false,
+        "sinopsis": "Jean Valjean busca redención mientras evade al implacable inspector Javert en una Francia revolucionaria."
+    },
+    {
+        "id": 13,
+        "titulo": "Fahrenheit 451",
+        "autor": "Ray Bradbury",
+        "genero": "Distopía",
+        "imagen": "https://th.bing.com/th/id/R.32a6833fc9a3628440df4960aa8b541d?rik=CWo%2bN99LiECy%2fg&pid=ImgRaw&r=0",
+        "disponible": true,
+        "sinopsis": "En un mundo donde los libros están prohibidos, Montag, un bombero, cuestiona su papel en la destrucción del conocimiento."
+    },
+    {
+        "id": 14,
+        "titulo": "El Nombre del Viento",
+        "autor": "Patrick Rothfuss",
+        "genero": "Fantasía",
+        "imagen": "https://th.bing.com/th/id/OIP.1rjULZGXBDipUV3Vu1bK0AHaLS?rs=1&pid=ImgDetMain",
+        "disponible": false,
+        "sinopsis": "La historia de Kvothe, un joven músico y aventurero, que busca la verdad detrás de los misterios de su pasado y los secretos de la magia."
+    },
+    {
+        "id": 15,
+        "titulo": "Drácula",
+        "autor": "Bram Stoker",
+        "genero": "Terror",
+        "imagen": "https://imagessl8.casadellibro.com/a/l/t0/78/9788439731078.jpg",
+        "disponible": true,
+        "sinopsis": "El clásico relato de vampiros donde el conde Drácula viaja a Inglaterra para expandir su dominio mientras un grupo de valientes intenta detenerlo."
+    },
+    {
+        "id": 16,
+        "titulo": "El Aleph",
+        "autor": "Jorge Luis Borges",
+        "genero": "Filosófico",
+        "imagen": "https://i.thenile.io/r1000/9780307950949.jpg?r=5ea98546707f3",
+        "disponible": false,
+        "sinopsis": "Una colección de cuentos que explora la infinitud, el tiempo y el espacio, incluyendo el misterioso objeto conocido como el Aleph."
+    },
+    {
+        "id": 17,
+        "titulo": "Frankenstein",
+        "autor": "Mary Shelley",
+        "genero": "Terror",
+        "imagen": "https://th.bing.com/th/id/R.4784e4777738ad4ab90dfc070954c79c?rik=qVuoV%2fgxQ6nvXg&pid=ImgRaw&r=0",
+        "disponible": true,
+        "sinopsis": "La tragedia del doctor Frankenstein y su creación, un monstruo rechazado por la sociedad que busca entender su lugar en el mundo."
+    },
+    {
+        "id": 18,
+        "titulo": "El Retrato de Dorian Gray",
+        "autor": "Oscar Wilde",
+        "genero": "Clásico",
+        "imagen": "https://th.bing.com/th/id/OIP.Dbz49oB7wSUi995cE4EYwwAAAA?rs=1&pid=ImgDetMain",
+        "disponible": false,
+        "sinopsis": "La historia de un hombre que intercambia su alma para mantener su belleza eterna, mientras su retrato envejece y refleja sus pecados."
+    },
+    {
+        "id": 19,
+        "titulo": "La Metamorfosis",
+        "autor": "Franz Kafka",
+        "genero": "Filosófico",
+        "imagen": "https://fthmb.tqn.com/4OXu9zK-fmLicLbwi696nvCnd1o=/1283x2000/filters:fill(auto,1)/la-metamorfosis-Austral-597bc20d3df78cbb7a25fdfd.jpg",
+        "disponible": true,
+        "sinopsis": "Gregor Samsa se despierta transformado en un insecto gigante, enfrentando el rechazo de su familia y la pérdida de su humanidad."
+    },
+    {
+        "id": 20,
+        "titulo": "El Señor de los Anillos",
+        "autor": "J.R.R. Tolkien",
+        "genero": "Fantasía",
+        "imagen": "https://th.bing.com/th/id/R.da91da3242da083fa9573ee4ce156b5b?rik=CwWXJpXdxDjcuA&pid=ImgRaw&r=0",
+        "disponible": false,
+        "sinopsis": "La épica batalla entre el bien y el mal, donde un grupo de héroes intenta destruir el Anillo Único antes de que caiga en manos de Sauron."
+    },
+    {
+        "id": 21,
+        "titulo": "El Alquimista",
+        "autor": "Paulo Coelho",
+        "genero": "Filosófico",
+        "imagen": "https://th.bing.com/th/id/OIP.D9Q56KhFZr1TWXa3W7n7dAHaLc?w=185&h=278&rs=1&pid=ImgDetMain",
+        "disponible": true,
+        "sinopsis": "Santiago, un joven pastor, emprende un viaje espiritual en busca de su leyenda personal y descubre el poder de seguir sus sueños."
+    },
+    {
+        "id": 22,
+        "titulo": "It",
+        "autor": "Stephen King",
+        "genero": "Terror",
+        "imagen": "https://th.bing.com/th/id/OIP.r7ls2Y5GR4CIyGc_gAhv0AHaLJ?w=185&h=278&rs=1&pid=ImgDetMain",
+        "disponible": false,
+        "sinopsis": "Un grupo de amigos enfrenta a una criatura malvada que adopta la forma de sus peores miedos en el pequeño pueblo de Derry."
+    },
+    {
+        "id": 23,
+        "titulo": "La Sombra del Viento",
+        "autor": "Carlos Ruiz Zafón",
+        "genero": "Misterio",
+        "imagen": "https://th.bing.com/th/id/OIP.pUJ4OIlaiyH8CuOyz3CnXAHaKm?w=185&h=278&rs=1&pid=ImgDetMain",
+        "disponible": true,
+        "sinopsis": "Daniel descubre un libro que cambia su vida mientras desentraña los oscuros secretos de su autor en la Barcelona de posguerra."
+    },
+    {
+        "id": 24,
+        "titulo": "Las Crónicas de Narnia",
+        "autor": "C.S. Lewis",
+        "genero": "Fantasía",
+        "imagen": "https://th.bing.com/th/id/OIP.zihK72kFwVBC5x1svv_J0AHaKd?w=185&h=278&rs=1&pid=ImgDetMain",
+        "disponible": false,
+        "sinopsis": "Cuatro hermanos descubren un mundo mágico gobernado por un león llamado Aslan, donde luchan contra la malvada Bruja Blanca."
+    },
+    {
+        "id": 25,
+        "titulo": "El Padrino",
+        "autor": "Mario Puzo",
+        "genero": "Crimen",
+        "imagen": "https://th.bing.com/th/id/OIP.G5OHncs2omFkE5MEHxTMqwHaLH?w=185&h=278&rs=1&pid=ImgDetMain",
+        "disponible": true,
+        "sinopsis": "La saga de la familia Corleone, que explora el poder, la lealtad y la tragedia dentro del mundo de la mafia."
+    },
+    {
+        "id": 26,
+        "titulo": "El Código Da Vinci",
+        "autor": "Dan Brown",
+        "genero": "Misterio",
+        "imagen": "https://th.bing.com/th/id/OIP.3V0HY5vRhHGGIdTXqBz4rwHaLJ?w=185&h=278&rs=1&pid=ImgDetMain",
+        "disponible": false,
+        "sinopsis": "El simbólogo Robert Langdon y Sophie Neveu descifran pistas ocultas en obras de arte para resolver un antiguo misterio."
+    },
+    {
+        "id": 27,
+        "titulo": "La Divina Comedia",
+        "autor": "Dante Alighieri",
+        "genero": "Épico",
+        "imagen": "https://th.bing.com/th/id/OIP.8UM6MHaKJGFSNN0nlt7KaAHaLQ?w=185&h=278&rs=1&pid=ImgDetMain",
+        "disponible": true,
+        "sinopsis": "El viaje de Dante a través del Infierno, el Purgatorio y el Paraíso, guiado por Virgilio y Beatriz, en busca de redención."
+    },
+    {
+        "id": 28,
+        "titulo": "Sherlock Holmes",
+        "autor": "Arthur Conan Doyle",
+        "genero": "Misterio",
+        "imagen": "https://th.bing.com/th/id/OIP.T2CvJw7ShNrmxUfa-r7dmAHaLH?w=185&h=278&rs=1&pid=ImgDetMain",
+        "disponible": false,
+        "sinopsis": "El famoso detective Sherlock Holmes y su amigo Watson resuelven casos intrigantes con su intelecto y habilidades de observación."
+    },
+    {
+        "id": 29,
+        "titulo": "El Silmarillion",
+        "autor": "J.R.R. Tolkien",
+        "genero": "Fantasía",
+        "imagen": "https://th.bing.com/th/id/OIP.xgOa9eLMlfMFWY8FQvYh_wHaKc?w=185&h=278&rs=1&pid=ImgDetMain",
+        "disponible": true,
+        "sinopsis": "Una recopilación de historias que narra la creación y la historia temprana de la Tierra Media, incluyendo la lucha contra Morgoth."
+    },
+    {
+        "id": 30,
+        "titulo": "La Casa de los Espíritus",
+        "autor": "Isabel Allende",
+        "genero": "Realismo Mágico",
+        "imagen": "https://th.bing.com/th/id/OIP.KCPQTOwG8jLvNQHcAUE2JQHaKY?w=185&h=278&rs=1&pid=ImgDetMain",
+        "disponible": false,
+        "sinopsis": "La saga de la familia Trueba, que mezcla política, amor y elementos mágicos en un Chile en transformación."
+    }
+]

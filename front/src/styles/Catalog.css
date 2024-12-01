@@ -1,22 +1,41 @@
 .row > .col-md-4 {
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
+}
   
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: auto;
+}
   
-  .card-img-top {
-    height: 200px;
-    object-fit: cover;
-    width: 100%;
-  }
-  
-  .card-body {
-    flex-grow: 1;
-  }
-  
+.card-body {
+  flex-grow: 1;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.dropdown-item.active {
+  background-color: #89664E !important;
+  border: none;
+  color: white !important;
+}
+
+.dropdown-item:focus, 
+.dropdown-item:hover {
+    background-color: #89664E !important; /* Fondo deseado */
+    color: white !important;             /* Texto blanco */
+}
+
+.form-check, .form-check-input, .form-check-label {
+  cursor: pointer !important;
+}
+
+.form-check-input:checked {
+  background-color: #89664E !important;
+  border: none;
+}

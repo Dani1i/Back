@@ -1,25 +1,61 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/catalog";
+// Configuración base de Axios
+const api = axios.create({
+  baseURL: "http://localhost:5000/api/catalog", // Base URL del backend para el catálogo
+});
 
-
-export const getCatalog = async () => {
+// Obtener todos los libros
+export const fetchBooks = async () => {
   try {
-    const response = await axios.get(API_URL); // Llama al backend
+    const response = await api.get("/");
     return response.data;
   } catch (error) {
-    console.error("Error al cargar el catálogo:", error);
+    console.error("Error al obtener los libros:", error);
     throw error;
   }
 };
 
-export const getDocumentByTitle = async (title) => {
+// Obtener libros destacados
+export const fetchFeaturedBooks = async () => {
   try {
-    const response = await axios.get(`${API_URL}/title/${title}`); // Llama al backend con el título
+    const response = await api.get("/featured");
     return response.data;
   } catch (error) {
-    console.error("Error al obtener documento:", error);
+    console.error("Error al obtener libros destacados:", error);
     throw error;
   }
 };
 
+// Crear un nuevo libro
+export const createBook = async (bookData) => {
+  try {
+    const response = await api.post("/", bookData);
+    return response.data;
+  } catch (error) {
+    console.error("Error al crear un libro:", error);
+    throw error;
+  }
+};
+
+// Actualizar un libro por ID
+export const updateBook = async (id, updatedData) => {
+  try {
+    const response = await api.put(`/${id}`, updatedData);
+    return response.data;
+  } catch (error) {
+    console.error("Error al actualizar el libro:", error);
+    throw error;
+  }
+};
+
+// Eliminar un libro por ID
+export const deleteBook = async (id) => {
+  try {
+    const response = await api.delete(`/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error al eliminar el libro:", error);
+    throw error;
+  }
+};

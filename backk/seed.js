@@ -1,38 +1,32 @@
 const mongoose = require("mongoose");
+const fs = require("fs");
+const path = require("path");
 const Document = require("./models/Document"); // Ruta correcta del modelo
 
-// Datos iniciales para poblar la base de datos
-const seedData = [
-  {
-    title: "El Principito",
-    author: "Antoine de Saint-Exupéry",
-    category: "Filosofía",
-    type: "book",
-    stock: 10,
-    available: true,
-  },
-  {
-    title: "Cien Años de Soledad",
-    author: "Gabriel García Márquez",
-    category: "Literatura",
-    type: "book",
-    stock: 5,
-    available: true,
-  },
-  {
-    title: "1984",
-    author: "George Orwell",
-    category: "Distopía",
-    type: "book",
-    stock: 3,
-    available: false,
-  },
-];
+// Función para leer datos desde libros.json
+const loadBooksFromFile = () => {
+  const filePath = path.join(__dirname, "assets", "libros.json");
+  const data = fs.readFileSync(filePath, "utf8");
+  return JSON.parse(data);
+};
 
-// Función para poblar la base de datos
+// Función para transformar los datos del archivo al esquema del modelo
+const transformDataToSchema = (books) => {
+  return books.map((book) => ({
+    title: book.titulo,
+    author: book.autor,
+    category: book.genero,
+    type: "book", // Ajuste basado en el esquema
+    stock: book.disponible ? 10 : 0, // Asigna stock basado en disponibilidad
+    available: book.disponible,
+    image: book.imagen, // Agrega la URL de la imagen
+  }));
+};
+
+// Función principal para poblar la base de datos
 const seedDatabase = async () => {
   try {
-    // Conecta a la base de datos
+    // Conexión a la base de datos
     await mongoose.connect("mongodb://localhost:27017/biblioteca", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -44,8 +38,12 @@ const seedDatabase = async () => {
     await Document.deleteMany({});
     console.log("Colección limpiada");
 
-    // Inserta los datos iniciales
-    await Document.insertMany(seedData);
+    // Cargar y transformar datos desde libros.json
+    const books = loadBooksFromFile();
+    const transformedData = transformDataToSchema(books);
+
+    // Inserta los datos en la base de datos
+    await Document.insertMany(transformedData);
     console.log("Datos iniciales insertados");
 
     // Cierra la conexión

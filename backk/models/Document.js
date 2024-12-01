@@ -7,6 +7,7 @@ const DocumentSchema = new mongoose.Schema({
   type: { type: String, enum: ["book", "audio", "video"], required: true }, // Tipo de recurso
   stock: { type: Number, default: 1 }, // Ejemplares disponibles
   available: { type: Boolean, default: true }, // Disponibilidad general
+  image: { type: String, required: false }, // URL de la imagen
 });
 
 module.exports = mongoose.model("Document", DocumentSchema);

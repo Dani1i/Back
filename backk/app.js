@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const catalogRoutes = require("./routes/catalog");
+const catalogRoutes = require("./routes/Catalog");
 const errorHandler = require("./middlewares/errorHandler");
 
 
