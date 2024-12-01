@@ -1,107 +1,63 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Catalog.css";
+import { getCatalog } from "../services/catalogService"; // Llama al servicio para obtener el catálogo
 
 const Catalog = () => {
-  // Libros estáticos
-  const libros = [
-    {
-      id: 1,
-      titulo: "El Principito",
-      autor: "Antoine de Saint-Exupéry",
-      disponible: true,
-      imagen: "https://th.bing.com/th/id/OIP.4jjqK8r4niDGIu1EzysUaAHaL8?rs=1&pid=ImgDetMain",
-    },
-    {
-      id: 2,
-      titulo: "Cien Años de Soledad",
-      autor: "Gabriel García Márquez",
-      disponible: false,
-      imagen: "https://th.bing.com/th/id/OIP.V_zRhQVc2o3qUvlc7KwpxgHaLT?w=600&h=916&rs=1&pid=ImgDetMain",
-    },
-    {
-      id: 3,
-      titulo: "1984",
-      autor: "George Orwell",
-      disponible: true,
-      imagen: "https://th.bing.com/th/id/OIP.8weipgxeZASSI2nt9APKNAAAAA?rs=1&pid=ImgDetMain",
-    },
-  ];
+  const [books, setBooks] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Estados para búsqueda y filtros
-  const [searchTitle, setSearchTitle] = useState("");
-  const [searchAuthor, setSearchAuthor] = useState("");
-  const [showAvailableOnly, setShowAvailableOnly] = useState(false);
+  useEffect(() => {
+    const fetchCatalog = async () => {
+      try {
+        const data = await getCatalog(); // Llama al backend para obtener los libros
+        setBooks(data); // Guarda los datos en el estado
+        setLoading(false);
+      } catch (error) {
+        console.error("Error al cargar el catálogo:", error);
+      }
+    };
+    fetchCatalog();
+  }, []);
 
-  // Filtrar los libros
-  const filteredBooks = libros.filter((libro) => {
-    return (
-      libro.titulo.toLowerCase().includes(searchTitle.toLowerCase()) &&
-      libro.autor.toLowerCase().includes(searchAuthor.toLowerCase()) &&
-      (!showAvailableOnly || libro.disponible)
-    );
-  });
+  if (loading) {
+    return <p>Cargando catálogo...</p>;
+  }
 
   return (
     <div className="container mt-5">
       <h1 className="text-center mb-4">Catálogo Completo</h1>
-
-      {/* Búsqueda y Filtros */}
-      <div className="mb-4">
-        <input
-          type="text"
-          placeholder="Buscar por título"
-          value={searchTitle}
-          onChange={(e) => setSearchTitle(e.target.value)}
-          className="form-control mb-2"
-        />
-        <input
-          type="text"
-          placeholder="Buscar por autor"
-          value={searchAuthor}
-          onChange={(e) => setSearchAuthor(e.target.value)}
-          className="form-control mb-2"
-        />
-        <div className="form-check">
-          <input
-            type="checkbox"
-            id="availableOnly"
-            checked={showAvailableOnly}
-            onChange={(e) => setShowAvailableOnly(e.target.checked)}
-            className="form-check-input"
-          />
-          <label className="form-check-label" htmlFor="availableOnly">
-            Mostrar solo disponibles
-          </label>
-        </div>
-      </div>
-
-      {/* Resultados del Catálogo */}
       <div className="row">
-        {filteredBooks.length > 0 ? (
-          filteredBooks.map((libro) => (
-            <div className="col-md-4 mb-4 d-flex align-items-stretch" key={libro.id}>
+        {books.length > 0 ? (
+          books.map((book) => (
+            <div className="col-md-4 mb-4" key={book._id}>
               <div className="card">
-                <img src={libro.imagen} className="card-img-top" alt={libro.titulo} />
+                <img
+                  src={book.image || "https://via.placeholder.com/150"}
+                  className="card-img-top"
+                  alt={book.title}
+                />
                 <div className="card-body">
-                  <h5 className="card-title">{libro.titulo}</h5>
-                  <h6 className="card-subtitle text-muted">{libro.autor}</h6>
+                  <h5 className="card-title">{book.title}</h5>
+                  <h6 className="card-subtitle text-muted">{book.author}</h6>
                   <p>
                     <span
-                      className={`badge ${libro.disponible ? "bg-success" : "bg-danger"}`}
+                      className={`badge ${
+                        book.available ? "bg-success" : "bg-danger"
+                      }`}
                     >
-                      {libro.disponible ? "Disponible" : "No Disponible"}
+                      {book.available ? "Disponible" : "No Disponible"}
                     </span>
                   </p>
-                  <Link to={`/book/${libro.id}`} className="btn btn-dark">
+                  <Link to={`/book/${encodeURIComponent(book.title)}`} className="btn btn-dark">
                     Ver Detalles
                   </Link>
+
                 </div>
               </div>
             </div>
           ))
         ) : (
-          <p className="text-center">No se encontraron resultados.</p>
+          <p>No se encontraron resultados.</p>
         )}
       </div>
     </div>
