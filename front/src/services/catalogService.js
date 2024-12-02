@@ -59,3 +59,14 @@ export const deleteBook = async (id) => {
     throw error;
   }
 };
+
+// Obtener un libro por su ID
+export const fetchBookById = async (id) => {
+  try {
+    const response = await api.get(`/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error al obtener el libro:", error);
+    throw error;
+  }
+};

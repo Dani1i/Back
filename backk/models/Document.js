@@ -8,6 +8,7 @@ const DocumentSchema = new mongoose.Schema({
   stock: { type: Number, default: 1 }, // Ejemplares disponibles
   available: { type: Boolean, default: true }, // Disponibilidad general
   image: { type: String, required: false }, // URL de la imagen
+  synopsis: { type: String, default: "Sinopsis no disponible." }, // Sinopsis del documento
 });
 
 module.exports = mongoose.model("Document", DocumentSchema);

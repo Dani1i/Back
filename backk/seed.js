@@ -20,6 +20,7 @@ const transformDataToSchema = (books) => {
     stock: book.disponible ? 10 : 0, // Asigna stock basado en disponibilidad
     available: book.disponible,
     image: book.imagen, // Agrega la URL de la imagen
+    synopsis: book.sinopsis || "Sinopsis no disponible.", // Agrega el campo de sinopsis
   }));
 };
 

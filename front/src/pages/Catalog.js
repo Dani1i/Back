@@ -16,15 +16,6 @@ const Catalog = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-
-  console.log("Libros cargados:", libros);
-  console.log("Categorías de los libros:", libros.map((libro) => libro.category));
-
-
-  // Calcular géneros únicos
-  const genres = [...new Set(libros.map((libro) => libro.category))];
-  console.log("Géneros disponibles:", genres); // Verificación aquí
-
   // Obtener libros desde el backend al montar el componente
   useEffect(() => {
     const loadBooks = async () => {
@@ -69,6 +60,9 @@ const Catalog = () => {
       applyFilters();
     }
   };
+
+  // Obtener géneros únicos de los datos dinámicos
+  const genres = [...new Set(libros.map((libro) => libro.category))];
 
   // Configuración de las migas de pan
   const breadcrumbItems = [
