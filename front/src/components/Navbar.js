@@ -64,6 +64,11 @@ const Navbar = () => {
                 Catálogo
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/sensor_humedad">
+                Sensor
+              </Link>
+            </li>
           </ul>
 
           {/* Campo de Contraseña */}

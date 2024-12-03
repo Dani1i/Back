@@ -6,6 +6,7 @@ import Catalog from "./pages/Catalog"; // Importación de la exportación predet
 import BookDetails from "./pages/BookDetails";
 import PrestamosAdmin from "./pages/PrestamosAdmin";
 import Login from "./pages/Login";
+import Sensor_humedad from "./pages/sensor_humedad";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/book/:id" element={<BookDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/prestamos-admin" element={<PrestamosAdmin />} />
+        <Route path="/sensor_humedad" element={<Sensor_humedad/>} />
       </Routes>
 
     </Router>
