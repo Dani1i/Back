@@ -290,7 +290,7 @@ const PrestamosAdmin = () => {
   </form>
   {updateError && <p className="text-danger">{updateError}</p>}
   {updateSuccess && <p className="text-success">Recurso actualizado con éxito</p>}
-</div>;
+</div>
       </div>
     </div>
   );

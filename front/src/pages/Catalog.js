@@ -150,33 +150,6 @@ const Catalog = () => {
       <div className="row">
         {filteredBooks.length > 0 ? (
           filteredBooks.map((libro) => (
-            // <div
-            //   className="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-            //   key={libro._id}
-            // >
-            //   <Link to={`/book/${libro._id}`} className="text-decoration-none">
-            //     <div className="card">
-            //       <img
-            //         src={libro.image || "default-image.jpg"}
-            //         className="card-img-top"
-            //         alt={libro.title}
-            //       />
-            //       <div className="card-body">
-            //         <h5 className="card-title">{libro.title}</h5>
-            //         <h6 className="card-subtitle text-muted">{libro.author}</h6>
-                    // <p>
-                    //   <span
-                    //     className={`badge ${
-                    //       libro.available ? "bg-success" : "bg-danger"
-                    //     }`}
-                    //   >
-                    //     {libro.available ? "Disponible" : "No Disponible"}
-                    //   </span>
-                    // </p>
-            //       </div>
-            //     </div>
-            //   </Link>
-            // </div>
             <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-center justify-content-center" key={libro.id}>
               <Link to={`/book/${libro.id}`} className="text-decoration-none">
                       <div
@@ -266,7 +239,9 @@ const Catalog = () => {
                     </div>
           ))
         ) : (
-          <p className="text-center">No se encontraron resultados.</p>
+          <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-center justify-content-center">
+            <p className="text-center">No se encontraron resultados.</p>
+          </div>
         )}
       </div>
     </div>

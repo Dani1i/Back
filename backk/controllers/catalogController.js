@@ -11,14 +11,18 @@ const getBooks = async (req, res) => {
   }
 };
 
+
 const updateBookByTitle = async (req, res) => {
   try {
     const { title } = req.params; // Título del libro a modificar
     const updatedData = req.body; // Datos actualizados
 
+    // Limpia el título para evitar problemas de formato
+    const normalizedTitle = title.trim();
+
     // Encuentra y actualiza el libro por título
     const updatedBook = await Document.findOneAndUpdate(
-      { title: title }, // Filtro
+      { title: normalizedTitle }, // Filtro
       updatedData, // Nuevos datos
       { new: true } // Retorna el documento actualizado
     );
@@ -33,7 +37,6 @@ const updateBookByTitle = async (req, res) => {
     res.status(500).json({ message: "Error al actualizar el libro" });
   }
 };
-
 
 // Obtener libros destacados
 const getFeaturedBooks = async (req, res) => {

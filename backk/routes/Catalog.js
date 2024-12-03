@@ -9,7 +9,6 @@ const { getBooks, updateBookByTitle, getFeaturedBooks, createBook, updateBook, d
 router.get("/", getBooks);
 
 
-
 // Ruta para actualizar un libro por título
 router.put("/title/:title", updateBookByTitle);
 

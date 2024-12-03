@@ -9,8 +9,8 @@ const api = axios.create({
 export const fetchBooks = async () => {
   try {
     const response = await api.get("/");
-    console.log(response.data.data);
-    return response.data.data;
+    console.log(response.data);
+    return response.data;
   } catch (error) {
     console.error("Error al obtener los libros:", error);
     throw error;
