@@ -1,15 +1,19 @@
 .navbar {
-    background-color: #4b2e1a !important;
+    border-bottom: 2px solid #4b2e1a;
+    padding-left: 2rem;
+    padding-right: 30px;
 }
-  
-.navbar-brand {
-    color: #ffffff !important;
+
+.nav-item {
+    padding-left: 1.5rem !important;
+    padding-right: 10px;
 }
-  
-.nav-link {
-    color: #ffffff !important;
+
+.bi-person-circle {
+    color: #4b2e1a;
+    padding-right: 8px;
 }
-  
-.nav-link:hover {
-    color: #ffffff !important;
+
+.nav-login {
+    display: flex;
 }

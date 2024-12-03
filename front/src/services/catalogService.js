@@ -20,9 +20,15 @@ export const fetchBooks = async () => {
 export const fetchFeaturedBooks = async () => {
   try {
     const response = await api.get("/featured");
+    
+    // Asegúrate de que la respuesta contenga datos
+    if (!response.data || !Array.isArray(response.data)) {
+      throw new Error("La respuesta no contiene un arreglo válido de libros.");
+    }
+
     return response.data;
   } catch (error) {
-    console.error("Error al obtener libros destacados:", error);
+    console.error("Error al obtener libros destacados:", error.response?.data || error.message);
     throw error;
   }
 };

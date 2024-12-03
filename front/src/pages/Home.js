@@ -17,11 +17,11 @@ const Home = () => {
         setLibrosDestacados(books);
         setLoading(false);
       } catch (err) {
-        console.error("Error al cargar los libros destacados:", err);
+        console.error("Detalles del error al cargar los libros destacados:", err.response || err.message);
         setError("Error al cargar los libros destacados.");
         setLoading(false);
       }
-    };
+    };    
 
     loadFeaturedBooks();
   }, []);
