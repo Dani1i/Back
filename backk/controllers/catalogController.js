@@ -24,25 +24,41 @@ const getFeaturedBooks = async (req, res) => {
 
 // Crear un nuevo libro
 const createBook = async (req, res) => {
-  try {
-    const { title, author, category, type, stock, available, image } = req.body;
+  const { title, author, category, type, stock, available, image, synopsis } = req.body;
 
-    // Crea un nuevo documento (libro)
+  try {
+    // Validar campos obligatorios
+    if (!title || !author || !category || !type) {
+      return res.status(400).json({
+        success: false,
+        message: "Título, autor, categoría y tipo son campos obligatorios",
+      });
+    }
+
+    // Crear el documento del libro
     const newBook = new Document({
       title,
       author,
       category,
       type,
-      stock,
-      available,
-      image,
+      stock: stock || 1, // Valor por defecto: 1
+      available: available !== undefined ? available : true, // Por defecto: disponible
+      image: image || "https://via.placeholder.com/150", // Imagen por defecto
+      synopsis: synopsis || "Sin descripción disponible", // Sinopsis por defecto
     });
 
-    await newBook.save(); // Guarda el libro en la base de datos
-    res.status(201).json(newBook);
+    const savedBook = await newBook.save();
+    res.status(201).json({
+      success: true,
+      message: "Libro agregado con éxito",
+      data: savedBook,
+    });
   } catch (error) {
-    console.error("Error al crear un libro:", error);
-    res.status(500).json({ message: "Error al crear el libro" });
+    console.error("Error al agregar el libro:", error);
+    res.status(500).json({
+      success: false,
+      message: "Error al agregar el libro",
+    });
   }
 };
 

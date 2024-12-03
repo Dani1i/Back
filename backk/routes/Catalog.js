@@ -3,6 +3,14 @@ const mongoose = require("mongoose");
 const Document = require("../models/Document");
 const router = express.Router();
 
+const { getBooks, getFeaturedBooks, createBook, updateBook, deleteBook } = require("../controllers/catalogController");
+
+// Ruta para agregar un nuevo libro
+router.get("/", getBooks);
+
+
+
+
 // Obtener todos los libros
 router.get("/", async (req, res) => {
   try {
