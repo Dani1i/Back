@@ -17,6 +17,7 @@ const mongoose = require("mongoose");
 
 const documentSchema = new mongoose.Schema(
   {
+    id: Number,
     title: String,
     author: String,
     category: String,

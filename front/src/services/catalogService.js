@@ -9,6 +9,7 @@ const api = axios.create({
 export const fetchBooks = async () => {
   try {
     const response = await api.get("/");
+    console.log(response.data.data);
     return response.data.data;
   } catch (error) {
     console.error("Error al obtener los libros:", error);
@@ -70,7 +71,8 @@ export const deleteBook = async (id) => {
 export const fetchBookById = async (id) => {
   try {
     const response = await api.get(`/${id}`);
-    return response.data;
+    console.log(response.data.data);
+    return response.data.data;
   } catch (error) {
     console.error("Error al obtener el libro:", error);
     throw error;

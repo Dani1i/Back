@@ -33,12 +33,13 @@ router.get("/:id", async (req, res) => {
   try {
     const { id } = req.params;
 
-    // Validar el formato del ID
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-      return res.status(400).json({ success: false, message: "ID inválido" });
+    // Validar que el ID es un número
+    if (isNaN(id)) {
+      return res.status(400).json({ success: false, message: "El ID debe ser un número válido" });
     }
 
-    const book = await Document.findById(id);
+    // Buscar el libro por ID
+    const book = await Document.findOne({ id: Number(id) }); // Convertir el ID a número para la consulta
     if (!book) {
       return res.status(404).json({ success: false, message: "Libro no encontrado" });
     }
@@ -49,6 +50,8 @@ router.get("/:id", async (req, res) => {
     res.status(500).json({ success: false, message: "Error al obtener el libro" });
   }
 });
+
+
 
 // Crear un nuevo libro
 router.post("/", async (req, res) => {
