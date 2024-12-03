@@ -42,19 +42,21 @@ app.use(express.json());
 app.use(cors());
 
 // Conexión a MongoDB Atlas
-const uri = "mongodb+srv://fran:1234@becdb.jbqf3.mongodb.net/BEC?retryWrites=true&w=majority";
+const mongoose = require("mongoose");
 
-mongoose
-  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("Conectado a MongoDB Atlas"))
-  .catch((err) => console.error("Error al conectar a MongoDB Atlas:", err));
+const userSchema = new mongoose.Schema(
+  {
+    rut: { type: String, required: true, unique: true }, // Identificador único
+    nombres: { type: String, required: true },
+    direccion: { type: String, required: true },
+    correo: { type: String, required: true, unique: true }, // Correo debe ser único
+    telefono: { type: String, required: true },
+    isAdmin: { type: Boolean, default: false }, // Nuevo campo para identificar si es admin
+  },
+  {
+    collection: "Usuarios", // Especifica el nombre de la colección
+  }
+);
 
-// Rutas
-app.use("/api/catalog", catalogRoutes);
+module.exports = mongoose.model("User", userSchema);
 
-// Middleware para manejo de errores
-app.use(require("./middlewares/errorHandler"));
-
-// Inicia el servidor
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
