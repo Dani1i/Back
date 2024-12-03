@@ -74,6 +74,7 @@ const loadBooksFromFile = () => {
 // Función para transformar los datos del archivo al esquema del modelo
 const transformDataToSchema = (books) => {
   return books.map((book) => ({
+    id: book.id,
     title: book.titulo,
     author: book.autor,
     category: book.genero,
