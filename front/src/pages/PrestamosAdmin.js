@@ -55,46 +55,57 @@ const PrestamosAdmin = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h1 className="text-center mb-4">Administración de Préstamos</h1>
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Usuario</th>
-            <th>Correo</th>
-            <th>Libro</th>
-            <th>Fecha de Solicitud</th>
-            <th>Tiempo Transcurrido</th>
-            <th>Estado</th>
-          </tr>
-        </thead>
-        <tbody>
-          {solicitudesData.map((solicitud) => (
-            <tr key={solicitud.id}>
-              <td>{solicitud.id}</td>
-              <td>{solicitud.usuario}</td>
-              <td>{solicitud.correo}</td>
-              <td>{solicitud.libro}</td>
-              <td>{new Date(solicitud.fechaSolicitud).toLocaleString()}</td>
-              <td>{calcularTiempo(solicitud.fechaSolicitud)}</td>
-              <td>
-                <span
-                  className={`badge ${
-                    solicitud.estado === "Aprobado"
-                      ? "bg-success"
-                      : solicitud.estado === "Pendiente"
-                      ? "bg-warning"
-                      : "bg-danger"
-                  }`}
-                >
-                  {solicitud.estado}
-                </span>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="container">
+        <div className="mt-5">
+            <h1 className="text-center mb-4">Administración de Préstamos</h1>
+            <table className="table table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Correo</th>
+                    <th>Libro</th>
+                    <th>Fecha de Solicitud</th>
+                    <th>Tiempo Transcurrido</th>
+                    <th>Estado</th>
+                </tr>
+                </thead>
+                <tbody>
+                {solicitudesData.map((solicitud) => (
+                    <tr key={solicitud.id}>
+                    <td>{solicitud.id}</td>
+                    <td>{solicitud.usuario}</td>
+                    <td>{solicitud.correo}</td>
+                    <td>{solicitud.libro}</td>
+                    <td>{new Date(solicitud.fechaSolicitud).toLocaleString()}</td>
+                    <td>{calcularTiempo(solicitud.fechaSolicitud)}</td>
+                    <td>
+                        <span
+                        className={`badge ${
+                            solicitud.estado === "Aprobado"
+                            ? "bg-success"
+                            : solicitud.estado === "Pendiente"
+                            ? "bg-warning"
+                            : "bg-danger"
+                        }`}
+                        >
+                        {solicitud.estado}
+                        </span>
+                    </td>
+                    </tr>
+                ))}
+                </tbody>
+            </table>
+        </div>
+        <div className="mt-5">
+            <h1 className="text-center mb-4">Añadir libro</h1>
+            <h5 className="text-center mb-4">Próximamente</h5>
+        </div>
+        <div className="mt-5">
+            <h1 className="text-center mb-4">Añadir multimedia</h1>
+            <h5 className="text-center mb-4">Próximamente</h5>
+        </div>
+      
     </div>
   );
 };
