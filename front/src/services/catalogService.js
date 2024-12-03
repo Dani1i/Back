@@ -17,6 +17,16 @@ export const fetchBooks = async () => {
   }
 };
 
+export const updateBook = async (title, updatedData) => {
+  try {
+    const response = await axios.put(`http://localhost:5000/api/catalog/title/${title}`, updatedData);
+    return response.data;
+  } catch (error) {
+    console.error("Error al actualizar el libro:", error);
+    throw error;
+  }
+};
+
 // Obtener libros destacados
 export const fetchFeaturedBooks = async () => {
   try {
@@ -46,15 +56,6 @@ export const createBook = async (bookData) => {
 };
 
 // Actualizar un libro por ID
-export const updateBook = async (id, updatedData) => {
-  try {
-    const response = await api.put(`/${id}`, updatedData);
-    return response.data;
-  } catch (error) {
-    console.error("Error al actualizar el libro:", error);
-    throw error;
-  }
-};
 
 // Eliminar un libro por ID
 export const deleteBook = async (id) => {

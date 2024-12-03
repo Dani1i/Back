@@ -11,6 +11,30 @@ const getBooks = async (req, res) => {
   }
 };
 
+const updateBookByTitle = async (req, res) => {
+  try {
+    const { title } = req.params; // Título del libro a modificar
+    const updatedData = req.body; // Datos actualizados
+
+    // Encuentra y actualiza el libro por título
+    const updatedBook = await Document.findOneAndUpdate(
+      { title: title }, // Filtro
+      updatedData, // Nuevos datos
+      { new: true } // Retorna el documento actualizado
+    );
+
+    if (!updatedBook) {
+      return res.status(404).json({ message: "Libro no encontrado" });
+    }
+
+    res.status(200).json({ message: "Libro actualizado con éxito", data: updatedBook });
+  } catch (error) {
+    console.error("Error al actualizar el libro:", error);
+    res.status(500).json({ message: "Error al actualizar el libro" });
+  }
+};
+
+
 // Obtener libros destacados
 const getFeaturedBooks = async (req, res) => {
   try {
@@ -109,4 +133,5 @@ module.exports = {
   createBook,
   updateBook,
   deleteBook,
+  updateBookByTitle,
 };
